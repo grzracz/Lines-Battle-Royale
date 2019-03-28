@@ -1,3 +1,7 @@
+#   Copyright (c) 2019 Grzegorz Raczek
+#   https://github.com/grzracz
+#   Files available under MIT license
+
 from queue import Queue
 import pygame
 import socket
