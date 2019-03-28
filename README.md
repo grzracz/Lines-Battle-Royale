@@ -4,12 +4,17 @@
 Multiplayer game with an app controller.
 
 # <a href="Game%20(Server)">Game (Server):</a>
-Writen in Python, using libraries: queue, pygame, socket, threading, time, random, sys and winsound.
+Writen in **Python**, using libraries: **queue, pygame, socket, threading, time, random, sys** and **winsound**.
+
 The game is about being the last one moving on the field that is getting smaller every 10 seconds.
-Number of players: 2-6 (this should be passed as the first argument when running the game), the default number is 2.
-The game starts after all players connect and choose their colors and ends after one of the players scores more than 1000 points.
+
+Number of players: **2-6** (this should be passed as the first argument when running the game), the default number is 2.
+
+The game starts after all players connect and choose their colors and ends after one of the players scores more than **1000** points.
 
 The server stores all incoming data in a separate thread-safe queue (one for each player) from which the main thread gets information needed to change movement directions.
+
+Make sure to change the **host** and **port** variables to correct values before running the Python script.
 
 <br>
 <p align="center">
@@ -19,10 +24,12 @@ The server stores all incoming data in a separate thread-safe queue (one for eac
 </p>
 
 # <a href="App%20(Client)">App (Client):</a>
-Written in Dart (using Flutter framework).
+Written in **Dart** (using **Flutter** framework).
+
 The app connects to the server after pressing "Disconnected" status, using the information available in the connection settings.
 
 The app will display a snackbar when it encounters a connection error, but will try to connect to a port that is already used infinitely.
+
 After connecting it will send short strings to the server whenever buttons are pressed (strings like "UP", "DOWN", "RIGHT", "LEFT").
 Whenever a button is pressed, the phone will vibrate (50ms for Android and 500ms for iOS).
 
