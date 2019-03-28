@@ -9,6 +9,6 @@ Multiplayer game written in Python with an app controller written in Dart that u
 
 <br>
 <p align="center">
-  <img src="Lines-Battle-Royale/tree/master/screenshots/app1.png">
-  <img src="Lines-Battle-Royale/tree/master/screenshots/app2.png">
+  <img src="app1.png">
+  <img src="app2.png">
 </p>
