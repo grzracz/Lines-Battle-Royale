@@ -23,7 +23,7 @@ Written in Dart (using Flutter framework).
 The app connects to the server after pressing "Disconnected" status, using the information available in the connection settings.
 
 The app will display a snackbar when it encounters a connection error, but will try to connect to a port that is already used infinitely.
-After connection it will send short string to the server whenever buttons are pressed (strings like "UP", "DOWN", "RIGHT", "LEFT").
+After connecting it will send short strings to the server whenever buttons are pressed (strings like "UP", "DOWN", "RIGHT", "LEFT").
 Whenever a button is pressed, the phone will vibrate (50ms for Android and 500ms for iOS).
 
 In connection settings you can change server address to which the app will try to connect.
