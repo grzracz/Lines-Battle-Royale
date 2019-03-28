@@ -1,3 +1,7 @@
+// Copyright (c) 2019 Grzegorz Raczek
+// https://github.com/grzracz
+// Files available under MIT license
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dart:io';
