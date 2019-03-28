@@ -1,10 +1,14 @@
-from queue import *
+from queue import Queue
 import pygame
 import socket
 import threading
 import time
 import random
 import sys
+import winsound
+
+host = "192.168.137.1"
+port = 10000
 
 
 class Server:
@@ -405,9 +409,7 @@ def get_previous_color(colors, number):
             return next_number
 
 
-# GLOBAL VARIABLES/CONSTANTS:
-host = "192.168.43.173"
-port = 8000
+# GLOBAL VARIABLES/CONSTANTS
 
 width = 1920
 height = 1080
@@ -486,13 +488,12 @@ while not all_connected:
         temp_x = int((width - text.get_width()) / 2)
         screen.blit(text, (temp_x, temp_y))
     if servers_connected(servers):
-        temp_y += int(indent / 3)
         text = bigfont.render("All players connected! Starting soon:    " + str(5 - int(connected_frames / 60)) + "...",
                               True, (2, 100, 64))
+        temp_y = height - text.get_height() - 20
         temp_x = int((width - text.get_width()) / 2)
         screen.blit(text, (temp_x, temp_y))
         connected_frames += 1
-        print(connected_frames)
     else:
         connected_frames = 0
     if connected_frames == 300:
@@ -568,9 +569,12 @@ for s in servers:
             command = s.q.get()
             if command == "LEFT":
                 color_number = get_previous_color(possible_colors, color_number)
+                winsound.PlaySound("sounds/move.wav", winsound.SND_ASYNC)
             elif command == "RIGHT":
                 color_number = get_next_color(possible_colors, color_number)
+                winsound.PlaySound("sounds/move.wav", winsound.SND_ASYNC)
             elif command == "DOWN":
+                winsound.PlaySound("sounds/kick.wav", winsound.SND_ASYNC)
                 s.color = (possible_colors[color_number][0], possible_colors[color_number][1],
                            possible_colors[color_number][2])
                 possible_colors[color_number] = (possible_colors[color_number][0], possible_colors[color_number][1],
@@ -669,8 +673,10 @@ while not game_ended:
             for i in range(0, number_of_players):
                 check_player = players[i].update()
                 if not check_player:
+                    winsound.PlaySound("sounds/kick.wav", winsound.SND_ASYNC)
                     players[i].stop()
             if players_stopped(players):
+                winsound.PlaySound("sounds/victory.wav", winsound.SND_ASYNC)
                 moving_player = find_moving_player(players)
                 if moving_player is not None:
                     moving_player.points += 100
@@ -722,6 +728,7 @@ while not game_ended:
 
 
 # ON GAME ENDED
+winsound.PlaySound("sounds/won.wav", winsound.SND_ASYNC)
 players.sort(key=get_points, reverse=True)
 width = width + menu_width
 while True:
