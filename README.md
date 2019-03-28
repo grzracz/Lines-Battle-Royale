@@ -4,7 +4,7 @@
 Multiplayer game with an app controller.
 
 # <a href="Game%20(Server)">Game (Server):</a>
-Writen in **Python**, using libraries: **queue, pygame, socket, threading, time, random, sys** and **winsound**.
+Writen in **Python**, using libraries: **queue, <a href="https://github.com/pygame/">pygame</a>, socket, threading, time, random, sys** and **winsound**.
 
 The game is about being the last one moving on the field that is getting smaller every 10 seconds.
 
@@ -25,6 +25,8 @@ Make sure to change the **host** and **port** variables to correct values before
 
 # <a href="App%20(Client)">App (Client):</a>
 Written in **Dart** (using **Flutter** framework).
+
+Additional libraries: **dart:io, <a href="https://pub.dartlang.org/packages/vibration">vibration</a>, <a href="https://pub.dartlang.org/packages/get_ip">get_ip</a>**
 
 The app connects to the server after pressing "Disconnected" status, using the information available in the connection settings.
 
