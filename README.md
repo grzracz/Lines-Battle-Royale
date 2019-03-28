@@ -13,9 +13,9 @@ The server stores all incoming data in a separate thread-safe queue (one for eac
 
 <br>
 <p align="center">
-  <img width="40%" height="40%" src="game1.png">
-  <img width="40%" height="40%" src="game2.png">
-  <img width="40%" height="40%" src="game3.png">
+  <img width="50%" height="50%" src="game1.png">
+  <img width="50%" height="50%" src="game2.png">
+  <img width="50%" height="50%" src="game3.png">
 </p>
 
 # App (Client):
@@ -32,6 +32,6 @@ The app will not connect properly without an IP address (because it is the first
 
 <br>
 <p align="center">
-  <img width="40%" height="40%" src="app1.jpg">
-  <img width="40%" height="40%" src="app2.jpg">
+  <img width="50%" height="50%" src="app1.jpg">
+  <img width="50%" height="50%" src="app2.jpg">
 </p>
