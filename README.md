@@ -13,9 +13,9 @@ The server stores all incoming data in a separate thread-safe queue (one for eac
 
 <br>
 <p align="center">
-  <img width="30%" height="30%" src="game1.png">
-  <img width="30%" height="30%" src="game2.png">
-  <img width="30%" height="30%" src="game3.png">
+  <img width="40%" height="40%" src="game1.png">
+  <img width="40%" height="40%" src="game2.png">
+  <img width="40%" height="40%" src="game3.png">
 </p>
 
 # App (Client):
