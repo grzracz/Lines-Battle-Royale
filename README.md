@@ -5,6 +5,13 @@ Multiplayer game written in Python with an app controller written in Dart that u
 
 # Game (Server):
 
+<br>
+<p align="center">
+  <img width="20%" height="20%" src="game1.png">
+  <img width="20%" height="20%" src="game2.png">
+  <img width="20%" height="20%" src="game3.png">
+</p>
+
 # App (Client):
 
 <br>
